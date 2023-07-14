@@ -21,4 +21,5 @@ from to_do_app import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
+    path('task_create/',views.TaskCreateView.as_view(),name='task_create'),
 ]

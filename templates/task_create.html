@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% block content %}
+    <style>
+    input {
+  width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+
+        border-radius: 10px;
+        color: white;
+        background-color: teal;
+        border-width: thick;}
+    input::placeholder{
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Agency FB" ;
+    }
+    textarea::placeholder{
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: "Agency FB" ;
+    }
+    input[type=submit] {
+    width: 15%;
+        font-family: "Agency FB";
+        font-size: large;
+    }
+    input[type=submit]:hover {
+    background-color: #45a049;
+    transform : scale(1.1);
+     transition: background-color 0.5s ease-out;;
+    }
+    textarea {
+         width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+
+        border-radius: 10px;
+        color: white;
+        background-color: teal;
+        border-width: thick;
+    }
+    div{
+    align-content: flex-start;
+    }
+
+
+    </style>
+<div id="task">
+<form method="post">
+    <input type="text" name="name" placeholder="name of your task">
+
+    <input type="date" name="date" placeholder="date of your task">
+    <input type="submit" value="Add">
+    <textarea name="description" placeholder="description of your task"></textarea>
+</form>
+</div>
+{% endblock %}
+```
