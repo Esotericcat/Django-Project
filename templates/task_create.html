@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
+
+
 {% block content %}
+
     <style>
     input {
   width: 30%;
@@ -47,17 +50,41 @@
     div{
     align-content: flex-start;
     }
+    #mes{
+      width: 30%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+
+        border-radius: 10px;
+        color: white;
+        background-color: teal;
+        border-width: thick;}
+
+
 
 
     </style>
 <div id="task">
 <form method="post">
+    {% csrf_token %}
     <input type="text" name="name" placeholder="name of your task">
 
     <input type="date" name="date" placeholder="date of your task">
     <input type="submit" value="Add">
     <textarea name="description" placeholder="description of your task"></textarea>
+
+
 </form>
+<div id="mes">
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+      <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }} <button>Ok</button></li>
+    {% endfor %}
+  </ul>
+    </div>
+{% endif %}
 </div>
 {% endblock %}
-```
+
