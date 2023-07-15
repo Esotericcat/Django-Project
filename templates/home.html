@@ -1,5 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
+    <style>
+    p{
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        color: wheat ;
+        font-family: "Agency FB";
+        background-color: darkcyan;
+        width: 15%;
+        border-radius: 15px;
+        box-sizing: border-box;
+    }
+    </style>
 <div>
 <p><a href={% url 'task_create' %}>create a task</a></p>
 </div>
